@@ -1,50 +1,39 @@
-# For the task I have followed the instructions to install as per requirements and setup and seed the database in PostgreSQL.
+# Kanban Board Implementation
+- This project implements a scalable, real-time Kanban board application for managing candidate workflows.
 
-# For Drag and Drop functionality I have used React DND
-- Run `yarn add react-dnd react-dnd-html5-backend` 
+# Setup Instructions
+# Install dependencies:
+- Ensure you have Node.js and PostgreSQL installed.
+- Run yarn install to install frontend dependencies.
+# Set up the backend:
+- Follow the instructions provided in the backend repository/bootstrap to set up and seed the PostgreSQL database.
+- Start the backend server using mix phx.server.
+# Start the frontend:
+- Navigate to the src directory and run yarn dev to start the frontend development server.
 
-# For api use I have tried Axios
-- Run `yarn add axios`
+# Features Implemented
+# Drag-and-Drop Functionality
+- Implemented: Drag-and-drop functionality for moving cards between different columns using React DND.
 
+- Installed libraries: react-dnd and react-dnd-html5-backend using yarn add react-dnd react-dnd-html5-backend.
+- Cards can be moved between columns such as new, interview, hired, and rejected.
+- #Pending:#  Drag-and-drop within the same column for reordering cards. This will require additional logic to update card positions and maintain their order in the backend.
 
+# API Integration
+- Axios is used for making API calls to the backend for retrieving and updating candidate data.
+- Installed using: yarn add axios.
+#Key APIs Used
+- GET /api/jobs/:jobId/candidates: To fetch candidate data.
+- PUT /api/candidates/:id: To update the status and position of candidates during drag-and-drop.
 
-# Wttj
+# Known Issues/Next Steps
+- Same Column Drag-and-Drop:
 
-## Requirements
-
-- Elixir 1.17.2-otp-27
-- Erlang 27.0.1
-- Postgresql
-- Nodejs 20.11.0
-- Yarn
-
-## Getting started
-
-To start your Phoenix server:
-
-- Run `mix setup` to install and setup dependencies
-- Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
-- install assets and start front
-
-```bash
-cd assets
-yarn
-yarn dev
-```
-
-### tests
-
-- backend: `mix test`
-- front: `cd assets & yarn test`
-
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-- Official website: https://www.phoenixframework.org/
-- Guides: https://hexdocs.pm/phoenix/overview.html
-- Docs: https://hexdocs.pm/phoenix
-- Forum: https://elixirforum.com/c/phoenix-forum
-- Source: https://github.com/phoenixframework/phoenix
+# Pending implementation to reorder cards within the same column.
+- This requires:
+- Frontend logic to capture new card positions.
+- Backend updates to store and reflect the updated order.
+- Error Handling:
+- Add robust error handling for API calls.
+- Real-Time Collaboration:
+-Real-time updates using WebSockets or Server-Sent Events (not implemented in this version).
