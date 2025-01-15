@@ -1,3 +1,13 @@
+# For the task I have followed the instructions to install as per requirements and setup and seed the database in PostgreSQL.
+
+# For Drag and Drop functionality I have used React DND
+- Run `yarn add react-dnd react-dnd-html5-backend` 
+
+# For api use I have tried Axios
+- Run `yarn add axios`
+
+
+
 # Wttj
 
 ## Requirements
